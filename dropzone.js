@@ -3,12 +3,12 @@ const inputFiles = document.getElementById('file-input');
 
 dropZone.addEventListener('dragover', (e) => {
     e.preventDefault();
-    //this.style.background = 'skyblue';
+    dropZone.style.background = 'skyblue';
 }, false);
 
 dropZone.addEventListener('dragleave', (e) => {
     e.preventDefault();
-    //this.style.background = 'white';
+    dropZone.style.background = 'white';
 }, false);
 
 inputFiles.addEventListener('change', (e) => {

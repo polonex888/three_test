@@ -15,19 +15,20 @@
             border: 1px solid; 
             padding: 30px;
         }
-        input[type="submit"]{
-            margin-top: 50px
-        } 
+        #log{
+            color: red;
+            font-size: 16px;
+        }
     </style>
-      <h2>.objと.mtlをアップロード</h2>
-      <form action="./upload.php" method="post" enctype="multipart/form-data">
-          <div id="dropzone">
-              <p>ファイルをドラッグアンドドロップ</p>
-              <input type="file" name="file" id="file-input" multiple>
-          </div>
-          <h2>プレビュー画面</h2>
-          <canvas id="myCanvas" width="480" height="320"></canvas>
-      </form>
-	<div id="three"></div>
+    <h2>.objと.mtlをプレビュー</h2>
+    <form action="./upload.php" method="post" enctype="multipart/form-data">
+        <div id="dropzone">
+            <p>ファイルをドラッグアンドドロップ</p>
+            <input type="file" name="file" id="file-input" multiple>
+        </div>
+        <h2>プレビュー画面</h2>
+        <canvas id="myCanvas" width="480" height="320"></canvas>
+    </form>
+	<div id="log"></div>
 </body>
 </html>
