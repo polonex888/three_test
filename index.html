@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="utf-8">
+	<style>body{margin: 0px; padding: 0px;}</style>
+	<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js" defer></script>
+    <script type="module" src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
+    <script type="module" src="https://unpkg.com/three@0.137.4/examples/js/loaders/OBJLoader.js"></script>
+    <script type="module" src="https://unpkg.com/three@0.137.4/examples/js/loaders/MTLLoader.js"></script>
+    <script  src="./canvas.js" defer></script>
+    <script src="./dropzone.js" defer></script>
+</head>
+<body>
+    <style>
+        #dropzone{
+            border: 1px solid; 
+            padding: 30px;
+        }
+        input[type="submit"]{
+            margin-top: 50px
+        } 
+    </style>
+      <h2>.objと.mtlをアップロード</h2>
+      <form action="./upload.php" method="post" enctype="multipart/form-data">
+          <div id="dropzone">
+              <p>ファイルをドラッグアンドドロップ</p>
+              <input type="file" name="file" id="file-input" multiple>
+          </div>
+          <h2>プレビュー画面</h2>
+          <canvas id="myCanvas" width="480" height="320"></canvas>
+      </form>
+	<div id="three"></div>
+</body>
+</html>
